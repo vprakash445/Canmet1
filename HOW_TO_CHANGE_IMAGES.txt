@@ -1,0 +1,249 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║          CANMET APP — COMPLETE IMAGE REPLACEMENT GUIDE              ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+This guide explains exactly where every image is stored and how to 
+replace them with your own images in English AND Hindi.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PART 1 — MODULE CARD IMAGES (shown on Home Screen)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Location: assets/images/modules/
+
+These 7 images appear as the background of each module card on the 
+home screen. Recommended size: 600 x 400 pixels (JPG or PNG).
+
+  File name                  Module
+  ─────────────────────────  ────────────────────────
+  edumet_card.png            EduMET (Metabolic Education)
+  nutrimet_card.png          NutriMET (Healthy Eating)
+  physimet_card.png          PhysiMET (Exercise)
+  safemet_card.png           SafeMET (Clinical Safety)
+  trackmet_card.png          TrackMET (Self Monitoring)
+  mindmet_card.png           MindMET (Stress & Sleep)
+  medimet_card.png           MediMET (Medication)
+
+HOW TO REPLACE:
+  1. Prepare your image (JPG/PNG, ideally 600x400 px)
+  2. Name it exactly as shown above (e.g. nutrimet_card.png)
+  3. Replace the file in assets/images/modules/
+  4. Done! No code changes needed.
+
+NOTE: These card images are the SAME for both Hindi and English.
+If you want different card images per language, let me know.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PART 2 — MODULE SECTION IMAGES (shown inside each module, Q&A style)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Each module has 3 or 4 sections. Each section has:
+  • An image shown ABOVE the question (always visible)
+  • English version: assets/images/MODULENAME/en/sectionN.png
+  • Hindi version:   assets/images/MODULENAME/hi/sectionN.png
+
+Recommended image size: 800 x 500 pixels (PNG or JPG)
+
+─────────────────────────────────────────────────────────────────────
+MODULE 1: EduMET — assets/images/edumet/
+─────────────────────────────────────────────────────────────────────
+
+  Section  English file                    Hindi file
+  ───────  ──────────────────────────────  ──────────────────────────
+  1        edumet/en/section1.png          edumet/hi/section1.png
+           "What is Metabolic Syndrome?"   (same question in Hindi)
+
+  2        edumet/en/section2.png          edumet/hi/section2.png
+           "Why Does It Matter?"           (same in Hindi)
+
+  3        edumet/en/section3.png          edumet/hi/section3.png
+           "How to Identify?"              (same in Hindi)
+
+  4        edumet/en/section4.png          edumet/hi/section4.png
+           "What You Can Do?"              (same in Hindi)
+
+─────────────────────────────────────────────────────────────────────
+MODULE 2: NutriMET — assets/images/nutrimet/
+─────────────────────────────────────────────────────────────────────
+
+  Section  English file                    Hindi file
+  ───────  ──────────────────────────────  ──────────────────────────
+  1        nutrimet/en/section1.png        nutrimet/hi/section1.png
+           "Millet Swap Challenge"
+
+  2        nutrimet/en/section2.png        nutrimet/hi/section2.png
+           "3:1 Plate Model"
+
+  3        nutrimet/en/section3.png        nutrimet/hi/section3.png
+           "Hidden Sugar Detective"
+
+  4        nutrimet/en/section4.png        nutrimet/hi/section4.png
+           "Healthy Fats & Protein"
+
+─────────────────────────────────────────────────────────────────────
+MODULE 3: PhysiMET — assets/images/physimet/
+─────────────────────────────────────────────────────────────────────
+
+  1        physimet/en/section1.png        physimet/hi/section1.png
+           "Activity Snacking (Every Hour)"
+
+  2        physimet/en/section2.png        physimet/hi/section2.png
+           "Chair Sits & Wall Push-ups"
+
+  3        physimet/en/section3.png        physimet/hi/section3.png
+           "Brisk Walking"
+
+  4        physimet/en/section4.png        physimet/hi/section4.png
+           "Post-Meal Walk"
+
+─────────────────────────────────────────────────────────────────────
+MODULE 4: SafeMET — assets/images/safemet/
+─────────────────────────────────────────────────────────────────────
+
+  1        safemet/en/section1.png         safemet/hi/section1.png
+           "Blood Sugar Safe Zone"
+
+  2        safemet/en/section2.png         safemet/hi/section2.png
+           "Daily Foot Care"
+
+  3        safemet/en/section3.png         safemet/hi/section3.png
+           "Warning Signs"
+
+─────────────────────────────────────────────────────────────────────
+MODULE 5: TrackMET — assets/images/trackmet/
+─────────────────────────────────────────────────────────────────────
+
+  1        trackmet/en/section1.png        trackmet/hi/section1.png
+           "What to Monitor Daily"
+
+  2        trackmet/en/section2.png        trackmet/hi/section2.png
+           "Waist vs Weight Concept"
+
+  3        trackmet/en/section3.png        trackmet/hi/section3.png
+           "Understanding Your Numbers"
+
+─────────────────────────────────────────────────────────────────────
+MODULE 6: MindMET — assets/images/mindmet/
+─────────────────────────────────────────────────────────────────────
+
+  1        mindmet/en/section1.png         mindmet/hi/section1.png
+           "Morning Sunlight 15 Minutes"
+
+  2        mindmet/en/section2.png         mindmet/hi/section2.png
+           "Calm Mind Breathing (4-4-6)"
+
+  3        mindmet/en/section3.png         mindmet/hi/section3.png
+           "Sleep Hygiene - Dark Protocol"
+
+─────────────────────────────────────────────────────────────────────
+MODULE 7: MediMET — assets/images/medimet/
+─────────────────────────────────────────────────────────────────────
+
+  1        medimet/en/section1.png         medimet/hi/section1.png
+           "Take Medicine On Time"
+
+  2        medimet/en/section2.png         medimet/hi/section2.png
+           "Never Skip - Never Double"
+
+  3        medimet/en/section3.png         medimet/hi/section3.png
+           "Managing Side Effects"
+
+  4        medimet/en/section4.png         medimet/hi/section4.png
+           "Medicine Storage"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PART 3 — HOW TO REPLACE IMAGES (Step by Step)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FOR ENGLISH IMAGES:
+  1. Prepare your image (PNG or JPG, recommended 800x500 px)
+  2. Navigate to: assets/images/MODULENAME/en/
+  3. Replace the file — keep the EXACT same filename
+     Example: replace nutrimet/en/section1.png with your millet image
+
+FOR HINDI IMAGES (different image for Hindi users):
+  1. Prepare your Hindi version image (same size)
+  2. Navigate to: assets/images/MODULENAME/hi/
+  3. Replace the file with the EXACT same filename
+     Example: replace nutrimet/hi/section1.png with your Hindi millet image
+
+IF YOU WANT SAME IMAGE FOR BOTH LANGUAGES:
+  Just put the same image file in both /en/ and /hi/ folders.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PART 4 — IMAGE TIPS & BEST PRACTICES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Recommended format: PNG (transparent background) or JPG
+✅ Recommended size: 800 x 500 pixels for sections, 600 x 400 for cards
+✅ Keep file size under 500KB for fast loading
+✅ Use infographic-style images (like the ones shared earlier)
+✅ For medical images, use simple diagrams — avoid real patient photos
+
+❌ Do NOT change the file NAME — only replace the file content
+❌ Do NOT change the folder structure
+❌ Do NOT use WEBP format (may not work on older Android)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PART 5 — AFTER REPLACING IMAGES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After replacing images, you need to rebuild the APK:
+
+Option A (GitHub Actions — Recommended):
+  1. Upload the updated assets/images/ folder to your GitHub repo
+  2. GitHub Actions will automatically build a new APK
+  3. Download the new APK from Actions > Artifacts
+
+Option B (Local build):
+  cd canmet_app
+  flutter pub get
+  flutter build apk --release
+  APK at: build/app/outputs/flutter-apk/app-release.apk
+
+NO CODE CHANGES NEEDED — just replace the image files!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+COMPLETE ASSET FOLDER TREE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+assets/
+└── images/
+    ├── modules/              ← Home screen card images (7 files)
+    │   ├── edumet_card.png
+    │   ├── nutrimet_card.png
+    │   ├── physimet_card.png
+    │   ├── safemet_card.png
+    │   ├── trackmet_card.png
+    │   ├── mindmet_card.png
+    │   └── medimet_card.png
+    │
+    ├── edumet/
+    │   ├── en/               ← English section images (section1-4.png)
+    │   └── hi/               ← Hindi section images  (section1-4.png)
+    ├── nutrimet/
+    │   ├── en/               ← 4 images
+    │   └── hi/               ← 4 images
+    ├── physimet/
+    │   ├── en/               ← 4 images
+    │   └── hi/               ← 4 images
+    ├── safemet/
+    │   ├── en/               ← 3 images
+    │   └── hi/               ← 3 images
+    ├── trackmet/
+    │   ├── en/               ← 3 images
+    │   └── hi/               ← 3 images
+    ├── mindmet/
+    │   ├── en/               ← 3 images
+    │   └── hi/               ← 3 images
+    └── medimet/
+        ├── en/               ← 4 images
+        └── hi/               ← 4 images
+
+TOTAL: 7 card images + 25 EN section images + 25 HI section images = 57 images

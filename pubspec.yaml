@@ -1,0 +1,53 @@
+name: canmet_app
+description: CANMET - Cancer Metabolic Management App (Hindi + English)
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.1
+  shared_preferences: ^2.2.2
+  http: ^1.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    # Module card images (shown on home screen)
+    - assets/images/modules/
+
+    # EduMET section images
+    - assets/images/edumet/en/
+    - assets/images/edumet/hi/
+
+    # NutriMET section images
+    - assets/images/nutrimet/en/
+    - assets/images/nutrimet/hi/
+
+    # PhysiMET section images
+    - assets/images/physimet/en/
+    - assets/images/physimet/hi/
+
+    # SafeMET section images
+    - assets/images/safemet/en/
+    - assets/images/safemet/hi/
+
+    # TrackMET section images
+    - assets/images/trackmet/en/
+    - assets/images/trackmet/hi/
+
+    # MindMET section images
+    - assets/images/mindmet/en/
+    - assets/images/mindmet/hi/
+
+    # MediMET section images
+    - assets/images/medimet/en/
+    - assets/images/medimet/hi/

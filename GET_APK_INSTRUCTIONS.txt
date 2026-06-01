@@ -1,0 +1,107 @@
+╔══════════════════════════════════════════════════════════════════╗
+║           HOW TO GET YOUR CANMET APK IN 10 MINUTES              ║
+║                  (Step by Step - Very Easy)                      ║
+╚══════════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OPTION 1: GITHUB (Recommended - Most Reliable)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: Create Free GitHub Account
+  → Go to: https://github.com/signup
+  → Enter email, password, username
+  → Verify your email (check inbox)
+
+STEP 2: Create New Repository
+  → Go to: https://github.com/new
+  → Repository name: canmet-app
+  → Select: Private
+  → Do NOT check any checkboxes
+  → Click: "Create repository" (green button)
+
+STEP 3: Upload Files
+  → On the new empty repo page, click: "uploading an existing file"
+     (it's a blue link in the middle of the page)
+  → Extract/unzip the canmet_flutter_app.zip on your computer
+  → Open the extracted "canmet_app" folder
+  → Press Ctrl+A (select all files inside canmet_app folder)
+  → Drag all selected files into the GitHub upload area
+  → Wait for upload (1-2 minutes)
+  → Scroll down, click: "Commit changes" (green button)
+
+  ⚠️  IMPORTANT: Upload the FILES INSIDE canmet_app, not the folder itself
+      ✅ Correct: pubspec.yaml is at the ROOT of your repository
+      ❌ Wrong:   canmet_app/pubspec.yaml (inside a subfolder)
+
+STEP 4: Watch the Build
+  → Click the "Actions" tab at the top of your repository
+  → You will see "Build CANMET APK" with a yellow spinner = building
+  → Wait 5-8 minutes
+  → When spinner turns GREEN ✅ = your APK is ready!
+
+  If it turns RED ✗:
+  → Click on it, click the failed job, read the error
+  → Most common fix: make sure pubspec.yaml is at repo ROOT
+
+STEP 5: Download Your APK
+  → Click on the completed green workflow run
+  → Scroll to the bottom of the page
+  → Under "Artifacts" section you will see:
+      📦 CANMET-Release-APK  ← Download this
+      📦 CANMET-Debug-APK    ← Or this for testing
+  → Click to download (it comes as a .zip containing the .apk)
+  → Extract the .zip → you have your CANMET.apk file!
+
+STEP 6: Install on Android Phone
+  → Send the .apk file to your phone (WhatsApp, email, USB cable)
+  → On phone: go to Settings → Security → "Install unknown apps"
+  → Allow your file manager to install apps
+  → Open the .apk file and tap Install
+  → Done! CANMET app is installed.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OPTION 2: CODEMAGIC (Free - No GitHub Account Needed)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  → Go to: https://codemagic.io/start/
+  → Sign up free (no credit card needed)
+  → Upload your project
+  → It will detect codemagic.yaml and build automatically
+  → Download APK from the build results
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OPTION 3: BUILD LOCALLY (If you have a computer with internet)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  1. Install Flutter SDK: https://flutter.dev/docs/get-started/install
+  2. Install Android Studio: https://developer.android.com/studio
+  3. Open terminal in the canmet_app folder
+  4. Run:
+       flutter pub get
+       flutter build apk --release
+  5. APK is at: build/app/outputs/flutter-apk/app-release.apk
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problem: GitHub Actions build fails
+Fix: Check that your repository root contains:
+  ✅ pubspec.yaml
+  ✅ lib/ folder  
+  ✅ android/ folder
+  ✅ .github/workflows/build-apk.yml
+
+Problem: "App not installed" on Android
+Fix: Go to Settings → Apps → Special App Access → Install Unknown Apps
+     Allow your browser or file manager
+
+Problem: GitHub says "No workflow file found"
+Fix: Make sure .github/workflows/build-apk.yml was uploaded.
+     Hidden folders (starting with .) need to be manually included.
+     On Mac: Press Cmd+Shift+. to show hidden files before uploading.
+     On Windows: In File Explorer → View → check "Hidden items"
+

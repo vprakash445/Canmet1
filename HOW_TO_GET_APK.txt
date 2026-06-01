@@ -1,0 +1,145 @@
+# How to Get Your CANMET APK — Step by Step
+# (No coding knowledge needed. Takes about 10 minutes.)
+
+==============================================================
+WHAT YOU NEED
+==============================================================
+- A free GitHub account (github.com)
+- The canmet_flutter_app.zip file (you already have this)
+- A computer with internet
+
+==============================================================
+STEP 1 — Create a free GitHub account (skip if you have one)
+==============================================================
+1. Go to https://github.com
+2. Click "Sign up"
+3. Enter your email, create a password, choose a username
+4. Verify your email address
+
+==============================================================
+STEP 2 — Create a new repository on GitHub
+==============================================================
+1. Log in to GitHub
+2. Click the green "New" button (top left) OR go to:
+   https://github.com/new
+3. Fill in:
+   - Repository name: canmet-app
+   - Visibility: Private (recommended) or Public
+   - Do NOT tick "Add a README file"
+4. Click "Create repository"
+5. Keep this page open — you'll need the repository URL
+
+==============================================================
+STEP 3 — Upload the project files
+==============================================================
+Option A — Upload via GitHub website (easiest, no Git needed):
+
+1. On your new empty repository page, click "uploading an existing file"
+2. Extract (unzip) the canmet_flutter_app.zip file on your computer
+3. Open the extracted canmet_app folder
+4. Select ALL files and folders inside canmet_app
+5. Drag and drop them into the GitHub upload area
+6. Scroll down, click "Commit changes"
+7. Wait for the upload to finish (may take 1–2 minutes)
+
+Option B — Using Git on command line:
+   git clone https://github.com/YOUR_USERNAME/canmet-app.git
+   cd canmet-app
+   cp -r /path/to/canmet_app/* .
+   git add .
+   git commit -m "Initial CANMET app"
+   git push origin main
+
+==============================================================
+STEP 4 — Watch the APK build automatically
+==============================================================
+1. After uploading, click the "Actions" tab at the top of your repository
+2. You will see "Build CANMET APK" workflow running (yellow circle = building)
+3. Click on it to watch the progress
+4. Wait about 5–8 minutes for it to finish
+5. When done, the circle turns GREEN ✅ = APK is ready!
+
+If it shows RED ✗:
+- Click on the failed job to see the error message
+- Most common fix: make sure ALL files from the zip were uploaded
+  (especially the lib/ folder and pubspec.yaml)
+
+==============================================================
+STEP 5 — Download your APK
+==============================================================
+1. Click on the completed green workflow run
+2. Scroll to the bottom of the page
+3. Under "Artifacts" you will see:
+   - CANMET-Debug-APK    ← use this for testing
+   - CANMET-Release-APK  ← use this for distribution
+4. Click either to download a .zip file containing the APK
+5. Extract the .zip — inside is your .apk file
+
+==============================================================
+STEP 6 — Install the APK on Android phone
+==============================================================
+Method 1 — Direct transfer (easiest):
+1. Connect your Android phone to computer via USB
+2. Copy the .apk file to your phone's Downloads folder
+3. On your phone, open the Files app
+4. Navigate to Downloads, tap the .apk file
+5. If asked, allow "Install from unknown sources" for your file manager
+6. Tap Install
+7. Open CANMET app!
+
+Method 2 — WhatsApp/Email to yourself:
+1. Send the APK file to yourself via WhatsApp or Email
+2. Open the file on your Android phone
+3. Tap to install
+
+⚠️  IMPORTANT — Allow Unknown Sources:
+Android blocks APKs not from Play Store by default. When prompted:
+- Go to Settings → Security → Install unknown apps
+- Allow your file manager or browser to install apps
+- Install the APK
+- You can turn this setting off again afterward
+
+==============================================================
+REBUILD AUTOMATICALLY (for future updates)
+==============================================================
+Every time you push/upload new code to GitHub, the APK builds
+automatically. Just repeat Step 3 with changed files.
+
+You can also trigger a manual build anytime:
+1. Go to Actions tab
+2. Click "Build CANMET APK"
+3. Click "Run workflow" → "Run workflow"
+
+==============================================================
+ALTERNATIVE — Build locally if you have Flutter installed
+==============================================================
+If you have Flutter SDK on your computer:
+
+  cd canmet_app
+  flutter pub get
+  flutter build apk --release
+
+APK will be at:
+  build/app/outputs/flutter-apk/app-release.apk
+
+==============================================================
+NEED HELP?
+==============================================================
+If the GitHub Actions build fails, common solutions:
+1. Make sure pubspec.yaml is at the ROOT of your repository
+   (not inside a subfolder like canmet_app/pubspec.yaml)
+2. Make sure the lib/ folder is also at the root
+3. Check that .github/workflows/build-apk.yml was uploaded
+
+Correct repository structure should look like:
+  your-repo/
+  ├── .github/
+  │   └── workflows/
+  │       └── build-apk.yml
+  ├── lib/
+  │   ├── main.dart
+  │   ├── screens/
+  │   └── utils/
+  ├── android/
+  ├── pubspec.yaml
+  └── README.md
