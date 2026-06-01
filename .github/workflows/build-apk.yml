@@ -1,0 +1,54 @@
+name: Build CANMET APK
+
+on:
+  push:
+    branches: ["**"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.19.6"
+          channel: stable
+
+      - name: Regenerate android folder with correct permissions
+        run: |
+          rm -rf android
+          flutter create --platforms=android --project-name canmet_app .
+          chmod +x android/gradlew
+          ls -la android/gradlew
+
+      - name: Flutter pub get
+        run: flutter pub get
+
+      - name: Build Release APK
+        run: flutter build apk --release
+
+      - name: Upload Release APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: CANMET-Release-APK
+          path: build/app/outputs/flutter-apk/app-release.apk
+          retention-days: 90
+
+      - name: Upload Debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: CANMET-Debug-APK
+          path: build/app/outputs/flutter-apk/app-debug.apk
+          retention-days: 90
